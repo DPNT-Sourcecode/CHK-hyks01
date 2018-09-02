@@ -93,6 +93,18 @@ describe('checkout', () => {
     it('returns the cost of item V', () => {
       expect(checkout('V')).toEqual(50);
     });
+
+    it('returns the cost of item W', () => {
+      expect(checkout('W')).toEqual(20);
+    });
+
+    it('returns the cost of item X', () => {
+      expect(checkout('X')).toEqual(90);
+    });
+
+    it('returns the cost of item Y', () => {
+      expect(checkout('Y')).toEqual(10);
+    });
   });
 
   describe('discounts', () => {
@@ -128,6 +140,11 @@ describe('checkout', () => {
 
     it('gives a discount for special offers on Q', () => {
       expect(checkout('QQQ')).toEqual(80);
+    });
+
+    it('gives a discount for special offers on V', () => {
+      expect(checkout('VV')).toEqual(90);
+      expect(checkout('VVV')).toEqual(130);
     });
   });
 

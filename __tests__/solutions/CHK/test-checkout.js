@@ -20,4 +20,8 @@ describe('checkout', () => {
   it('returns the cost of item D', () => {
     expect(checkout('D')).toEqual(15);
   });
+
+  it('returns the total cost of multiple items', () => {
+    expect(checkout('ABCD')).toEqual(115);
+  });
 });

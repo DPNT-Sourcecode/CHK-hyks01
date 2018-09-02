@@ -77,6 +77,14 @@ describe('checkout', () => {
     it('returns the cost of item R', () => {
       expect(checkout('R')).toEqual(50);
     });
+
+    it('returns the cost of item S', () => {
+      expect(checkout('S')).toEqual(30);
+    });
+
+    it('returns the cost of item T', () => {
+      expect(checkout('T')).toEqual(20);
+    });
   });
 
   describe('discounts', () => {
@@ -126,6 +134,10 @@ describe('checkout', () => {
 
     it('gives a free "M" for every three "Ns"', () => {
       expect(checkout('NNNM')).toEqual(120);
+    });
+
+    it('gives a free "Q" for every three "Rs"', () => {
+      expect(checkout('RRRQQ')).toEqual(180);
     });
 
     it('gives a discount for multiple special offers', () => {

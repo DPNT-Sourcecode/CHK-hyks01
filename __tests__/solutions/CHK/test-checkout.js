@@ -38,10 +38,6 @@ describe('checkout', () => {
     expect(checkout('EEB')).toEqual(80);
   });
 
-  it('does not give any free items not in the cart', () => {
-    expect(checkout('EE')).toEqual(80);
-  })
-
   it('provides a discount for multiple special offers', () => {
     expect(checkout('AAAABBBD')).toEqual(270);
   });
@@ -49,4 +45,13 @@ describe('checkout', () => {
   it('returns the total for items without offers', () => {
     expect(checkout('CDD')).toEqual(50);
   });
+
+  it('provides a free "F" for every two "Fs"', () => {
+    expect(checkout('FFF')).toEqual(20);
+  });
+
+  it('does not give any free items not in the cart', () => {
+    expect(checkout('EE')).toEqual(80);
+    expect(checkout('FF')).toEqual(20);
+  })
 });

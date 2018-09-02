@@ -79,7 +79,7 @@ describe('checkout', () => {
     });
 
     it('returns the cost of item S', () => {
-      expect(checkout('S')).toEqual(30);
+      expect(checkout('S')).toEqual(20);
     });
 
     it('returns the cost of item T', () => {
@@ -99,15 +99,15 @@ describe('checkout', () => {
     });
 
     it('returns the cost of item X', () => {
-      expect(checkout('X')).toEqual(90);
+      expect(checkout('X')).toEqual(17);
     });
 
     it('returns the cost of item Y', () => {
-      expect(checkout('Y')).toEqual(10);
+      expect(checkout('Y')).toEqual(20);
     });
 
     it('returns the cost of item Z', () => {
-      expect(checkout('Z')).toEqual(50);
+      expect(checkout('Z')).toEqual(21);
     });
   });
 
@@ -184,7 +184,7 @@ describe('checkout', () => {
   });
 
   describe('group buys', () => {
-    xit('provides a group by discount for relevant products', () => {
+    it('provides a group by discount for relevant products', () => {
       expect(checkout('XYZ')).toEqual(45);
     });
   });

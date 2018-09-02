@@ -1,5 +1,5 @@
 const sum = require('../../../lib/solutions/SUM/sum');
 
-test("compute sum", function(t) {
-    t.is(sum(1, 2), 3);
+test('compute sum', () => {
+    expect(sum(1, 2)).toEqual(3);
 });

@@ -73,6 +73,10 @@ describe('checkout', () => {
     it('returns the cost of item Q', () => {
       expect(checkout('Q')).toEqual(30);
     });
+
+    it('returns the cost of item R', () => {
+      expect(checkout('R')).toEqual(50);
+    });
   });
 
   describe('discounts', () => {
@@ -104,6 +108,10 @@ describe('checkout', () => {
 
     it('gives a discount for special offers on P', () => {
       expect(checkout('PPPPPPP')).toEqual(300);
+    });
+
+    it('gives a discount for special offers on Q', () => {
+      expect(checkout('QQQ')).toEqual(80);
     });
   });
 

@@ -38,6 +38,10 @@ describe('checkout', () => {
     expect(checkout('EEB')).toEqual(80);
   });
 
+  it('does not give any free items not in the cart', () => {
+    expect(checkout('EE')).toEqual(80);
+  })
+
   it('provides a discount for multiple special offers', () => {
     expect(checkout('AAAABBBD')).toEqual(270);
   });

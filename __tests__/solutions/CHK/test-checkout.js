@@ -8,4 +8,8 @@ describe('checkout', () => {
   it('returns the cost of item A', () => {
     expect(checkout('A')).toEqual(50);
   });
+
+  it('returns the cost of item B', () => {
+    expect(checkout('B')).toEqual(30);
+  });
 });

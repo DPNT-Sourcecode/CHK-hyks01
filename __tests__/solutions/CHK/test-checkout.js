@@ -26,6 +26,6 @@ describe('checkout', () => {
   });
 
   it('provides a discount for special offers', () => {
-
+    expect(checkout('AAAABBBD')).toEqual(270);
   });
 });

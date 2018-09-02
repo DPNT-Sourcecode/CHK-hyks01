@@ -25,11 +25,20 @@ describe('checkout', () => {
     expect(checkout('ABCD')).toEqual(115);
   });
 
-  it('provides a discount for special offers', () => {
+  it('provides a discount for special offers on A', () => {
+    expect(checkout('AAAA')).toEqual(180);
+    expect(checkout('AAAAAA')).toEqual(250);
+  });
+
+  it('provides a discount for special offers on B', () => {
+    expect(checkout('BBB')).toEqual(75);
+  });
+
+  it('provides a discount for multiple special offers', () => {
     expect(checkout('AAAABBBD')).toEqual(270);
   });
 
-  it('returns the total for items wihout offers', () => {
+  it('returns the total for items without offers', () => {
     expect(checkout('CDD')).toEqual(50);
   });
 });

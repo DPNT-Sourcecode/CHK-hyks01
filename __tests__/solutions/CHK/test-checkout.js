@@ -30,26 +30,37 @@ describe('checkout', () => {
       expect(checkout('F')).toEqual(10);
     });
 
-    it('returns the cost of item F', () => {
+    it('returns the cost of item G', () => {
       expect(checkout('G')).toEqual(20);
     });
-  })
 
-  it('returns the total cost of multiple items', () => {
-    expect(checkout('ABCD')).toEqual(115);
+    it('returns the cost of item H', () => {
+      expect(checkout('H')).toEqual(10);
+    });
   });
 
-  it('returns the total for items without offers', () => {
-    expect(checkout('CDD')).toEqual(50);
-  });
+  describe('discounts', () => {
+    it('returns the total cost of multiple items', () => {
+      expect(checkout('ABCD')).toEqual(115);
+    });
 
-  it('gives a discount for special offers on A', () => {
-    expect(checkout('AAAA')).toEqual(180);
-    expect(checkout('AAAAAA')).toEqual(250);
-  });
+    it('returns the total for items without offers', () => {
+      expect(checkout('CDD')).toEqual(50);
+    });
 
-  it('gives a discount for special offers on B', () => {
-    expect(checkout('BBB')).toEqual(75);
+    it('gives a discount for special offers on A', () => {
+      expect(checkout('AAAA')).toEqual(180);
+      expect(checkout('AAAAAA')).toEqual(250);
+    });
+
+    it('gives a discount for special offers on B', () => {
+      expect(checkout('BBB')).toEqual(75);
+    });
+
+    it('gives a discount for special offers on H', () => {
+      expect(checkout('HHHHHH')).toEqual(65);
+      expect(checkout('HHHHHHHHHHH')).toEqual(90);
+    });
   });
 
   it('gives a free "B" for every two "Es"', () => {

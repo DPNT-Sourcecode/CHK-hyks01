@@ -182,4 +182,10 @@ describe('checkout', () => {
       expect(checkout('FF')).toEqual(20);
     });
   });
+
+  describe('group buys', () => {
+    it('provides a group by discount for relevant products', () => {
+      expect(checkout('XYZ')).toEqual(45);
+    });
+  });
 });

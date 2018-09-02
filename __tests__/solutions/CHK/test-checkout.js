@@ -105,6 +105,10 @@ describe('checkout', () => {
     it('returns the cost of item Y', () => {
       expect(checkout('Y')).toEqual(10);
     });
+
+    it('returns the cost of item Z', () => {
+      expect(checkout('Z')).toEqual(50);
+    });
   });
 
   describe('discounts', () => {

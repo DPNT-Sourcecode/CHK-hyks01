@@ -187,5 +187,9 @@ describe('checkout', () => {
     it('provides a group by discount for relevant products', () => {
       expect(checkout('XYZ')).toEqual(45);
     });
+
+    it('gives the best possible discount to the customer', () => {
+      expect(checkout('STXYZ')).toEqual(82);
+    });
   });
 });

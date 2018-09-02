@@ -28,4 +28,8 @@ describe('checkout', () => {
   it('provides a discount for special offers', () => {
     expect(checkout('AAAABBBD')).toEqual(270);
   });
+
+  it('returns the total for items wihout offers', () => {
+    expect(checkout('CDD')).toEqual(50);
+  });
 });

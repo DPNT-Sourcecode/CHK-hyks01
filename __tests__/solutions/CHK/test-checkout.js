@@ -34,6 +34,10 @@ describe('checkout', () => {
     expect(checkout('BBB')).toEqual(75);
   });
 
+  it('provides a free "B" for every two "Es"', () => {
+    expect(checkout('EEB')).toEqual(80);
+  });
+
   it('provides a discount for multiple special offers', () => {
     expect(checkout('AAAABBBD')).toEqual(270);
   });

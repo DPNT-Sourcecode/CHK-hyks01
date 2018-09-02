@@ -1,7 +1,7 @@
 const hello = require('../../../lib/solutions/HLO/hello');
 
 describe('hello', () => {
-  it('returns a string', () => {
-    expect(hello('some string')).toEqual('some string');
+  it('returns "Hello, World!"', () => {
+    expect(hello('some string')).toEqual('Hello, World!');
   })
 })

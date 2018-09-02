@@ -1,7 +1,7 @@
 const hello = require('../../../lib/solutions/HLO/hello');
 
 describe('hello', () => {
-  it('returns "Hello, World!"', () => {
-    expect(hello('some string')).toEqual('Hello, World!');
+  it('returns a string containing the friend name', () => {
+    expect(hello('john')).toEqual('Hello, john!');
   })
 })

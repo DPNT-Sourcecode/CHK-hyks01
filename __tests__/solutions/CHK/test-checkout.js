@@ -188,7 +188,7 @@ describe('checkout', () => {
       expect(checkout('XYZ')).toEqual(45);
     });
 
-    it('gives the best possible discount to the customer', () => {
+    fit('gives the best possible discount to the customer', () => {
       expect(checkout('STXYZ')).toEqual(82);
     });
   });

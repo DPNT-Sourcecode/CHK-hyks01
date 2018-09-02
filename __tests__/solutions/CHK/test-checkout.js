@@ -25,28 +25,28 @@ describe('checkout', () => {
     expect(checkout('ABCD')).toEqual(115);
   });
 
-  it('provides a discount for special offers on A', () => {
-    expect(checkout('AAAA')).toEqual(180);
-    expect(checkout('AAAAAA')).toEqual(250);
-  });
-
-  it('provides a discount for special offers on B', () => {
-    expect(checkout('BBB')).toEqual(75);
-  });
-
-  it('provides a free "B" for every two "Es"', () => {
-    expect(checkout('EEB')).toEqual(80);
-  });
-
-  it('provides a discount for multiple special offers', () => {
-    expect(checkout('AAAABBBD')).toEqual(270);
-  });
-
   it('returns the total for items without offers', () => {
     expect(checkout('CDD')).toEqual(50);
   });
 
-  it('provides a free "F" for every two "Fs"', () => {
+  it('gives a discount for special offers on A', () => {
+    expect(checkout('AAAA')).toEqual(180);
+    expect(checkout('AAAAAA')).toEqual(250);
+  });
+
+  it('gives a discount for special offers on B', () => {
+    expect(checkout('BBB')).toEqual(75);
+  });
+
+  it('gives a free "B" for every two "Es"', () => {
+    expect(checkout('EEB')).toEqual(80);
+  });
+
+  it('gives a discount for multiple special offers', () => {
+    expect(checkout('AAAABBBD')).toEqual(270);
+  });
+
+  it('gives a free "F" for every two "Fs"', () => {
     expect(checkout('FFF')).toEqual(20);
   });
 

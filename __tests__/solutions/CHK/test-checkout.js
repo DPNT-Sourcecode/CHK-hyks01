@@ -24,4 +24,8 @@ describe('checkout', () => {
   it('returns the total cost of multiple items', () => {
     expect(checkout('ABCD')).toEqual(115);
   });
+
+  it('provides a discount for special offers', () => {
+
+  });
 });
